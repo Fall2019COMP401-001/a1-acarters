@@ -10,14 +10,14 @@ public class A1Novice {
 
 		// Your code follows here.
 		int customerNum = scan.nextInt();
-		for(int i = 0; i < customerNum; i++)
+		for(int i = 0; i <= customerNum; i++)
 		{
 		String firstName = scan.next();
 		char firstChar = firstName.charAt(0);
 		String lastName = scan.next();
 		int numOfItems = scan.nextInt();
 		double total = 0.0;
-		for(int j = 0; j < numOfItems; i++)
+		for(int j = 0; j <= numOfItems; i++)
 		{
 			int quant = scan.nextInt();
 			scan.next();
