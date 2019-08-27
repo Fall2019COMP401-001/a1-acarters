@@ -40,7 +40,7 @@ public class A1Adept {
 				String name = scan.next();
 				for (int k = 0; k < priceArr.length; k++)
 				{
-				if (name == nameArr[k])
+				if (name.equals(nameArr[k]))
 				{
 					total += quant * priceArr[k];
 				}
