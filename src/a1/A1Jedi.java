@@ -11,8 +11,8 @@ public class A1Jedi {
 		// Your code follows here.
 		int itemNum = scan.nextInt();
 		String[] nameArr = new String[itemNum];
-		double[] custNumArr = new double[itemNum];
-		double[] numArr = new double[itemNum];
+		int[] custNumArr = new int[itemNum];
+		int[] numArr = new int[itemNum];
 		for(int i = 0; i < itemNum; i++)
 		{
 		String itemName = scan.next();
@@ -42,14 +42,15 @@ public class A1Jedi {
 		}
 		for (int i = 0; i < nameArr.length; i++)
 		{
-			if (numArr[i] == 0)
+			if (custNumArr[i] == 0)
 			{
 				System.out.println("No customers bought " + nameArr[i]);
 			}
-			else if (numArr[i] != 0)
+			else if (custNumArr[i] != 0)
 			{
-				System.out.println(custNumArr[i] + " customers bought " + numArr[i] + nameArr[i]);
+				System.out.println(custNumArr[i] + " customers bought " + numArr[i] + " " + nameArr[i]);
 			}
 		}
+		scan.close();
 	}
 }
