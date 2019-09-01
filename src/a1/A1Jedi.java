@@ -38,7 +38,7 @@ public class A1Jedi {
 					{
 						numArr[lastIndex] += quant;
 					}
-				if (name.equals(nameArr[k]))
+					else if (name.equals(nameArr[k]))
 				{
 					custNumArr[k] += 1;
 					numArr[k] += quant;
