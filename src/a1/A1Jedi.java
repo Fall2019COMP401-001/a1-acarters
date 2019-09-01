@@ -9,6 +9,47 @@ public class A1Jedi {
 		Scanner scan = new Scanner(System.in);
 
 		// Your code follows here.
-		
+		int itemNum = scan.nextInt();
+		String[] nameArr = new String[itemNum];
+		double[] custNumArr = new double[itemNum];
+		double[] numArr = new double[itemNum];
+		for(int i = 0; i < itemNum; i++)
+		{
+		String itemName = scan.next();
+		scan.nextDouble();
+		nameArr[i] = itemName;
+		}
+		int customerNum = scan.nextInt();
+		for(int i = 0; i < customerNum; i++)
+		{
+			scan.next();
+			scan.next();
+			int itemCount = scan.nextInt();
+			for (int j = 0; j < itemCount; j++)
+			{
+				int quant = scan.nextInt();
+				String name = scan.next();
+				for (int k = 0; k < nameArr.length; k++)
+				{
+				if (name.equals(nameArr[k]))
+				{
+					custNumArr[i] += 1;
+					numArr[i] += quant;
+				}
+			}
+		}
+
+		}
+		for (int i = 0; i < nameArr.length; i++)
+		{
+			if (numArr[i] == 0)
+			{
+				System.out.println("No customers bought " + nameArr[i]);
+			}
+			else if (numArr[i] != 0)
+			{
+				System.out.println(custNumArr[i] + " customers bought " + numArr[i] + nameArr[i]);
+			}
+		}
 	}
 }
