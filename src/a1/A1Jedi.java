@@ -33,8 +33,8 @@ public class A1Jedi {
 				{
 				if (name.equals(nameArr[k]))
 				{
-					custNumArr[i] += 1;
-					numArr[i] += quant;
+					custNumArr[k] += 1;
+					numArr[k] += quant;
 				}
 			}
 		}
