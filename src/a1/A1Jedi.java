@@ -13,6 +13,7 @@ public class A1Jedi {
 		String[] nameArr = new String[itemNum];
 		int[] custNumArr = new int[itemNum];
 		int[] numArr = new int[itemNum];
+		boolean[] boughtThisAlready = new boolean[itemNum];
 		for(int i = 0; i < itemNum; i++)
 		{
 		String itemName = scan.next();
@@ -25,27 +26,26 @@ public class A1Jedi {
 			scan.next();
 			scan.next();
 			int itemCount = scan.nextInt();
-			String lastName = "";
-			int lastIndex = 0;
 			for (int j = 0; j < itemCount; j++)
-			{
-				
+			{				
 				int quant = scan.nextInt();
 				String name = scan.next();
 				for (int k = 0; k < nameArr.length; k++)
 				{
-					if (name.equals(lastName))
-					{
-						numArr[lastIndex] += quant;
-					}
-					else if (name.equals(nameArr[k]))
+					if (name.equals(nameArr[k]))
 				{
-					custNumArr[k] += 1;
 					numArr[k] += quant;
-					lastName = name;
-					lastIndex = k;
+					if (boughtThisAlready[k] == false)
+					{
+						custNumArr[k] += 1;
+					}
+					boughtThisAlready[k] = true;
 				}
 			}
+				for (int k = 0; k < boughtThisAlready.length; k++)
+				{
+					boughtThisAlready[k] = false;
+				}
 		}
 
 		}
