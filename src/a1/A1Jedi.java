@@ -42,12 +42,11 @@ public class A1Jedi {
 					boughtThisAlready[k] = true;
 				}
 			}
-				for (int k = 0; k < boughtThisAlready.length; k++)
-				{
-					boughtThisAlready[k] = false;
-				}
 		}
-
+			for (int k = 0; k < boughtThisAlready.length; k++)
+			{
+				boughtThisAlready[k] = false;
+			}
 		}
 		for (int i = 0; i < nameArr.length; i++)
 		{
