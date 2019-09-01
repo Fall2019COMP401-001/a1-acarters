@@ -32,12 +32,12 @@ public class A1Jedi {
 				
 				int quant = scan.nextInt();
 				String name = scan.next();
-				if (name.equals(lastName))
-				{
-					numArr[lastIndex] += quant;
-				}
 				for (int k = 0; k < nameArr.length; k++)
 				{
+					if (name.equals(lastName))
+					{
+						numArr[lastIndex] += quant;
+					}
 				if (name.equals(nameArr[k]))
 				{
 					custNumArr[k] += 1;
